@@ -5,91 +5,81 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Wraithjack - Cybersecurity Portfolio">
   <title>Wraithjack</title>
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
-      font-family: 'Share Tech Mono', monospace;
-      background-color: #0f0f0f;
-      color: #f5f5f5;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    header {
-      width: 100%;
-      padding: 1rem;
-      background: #1a1a1a;
-      text-align: center;
-      font-size: 2rem;
-    }
-    nav a {
-      margin: 0 1rem;
-      color: #00ffcc;
-      text-decoration: none;
-    }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      max-width: 800px;
+      font-family: 'Fira Code', monospace;
+      background-color: #0d0d0d;
+      color: #33ff33;
       padding: 2rem;
       line-height: 1.6;
     }
-    footer {
-      padding: 1rem;
-      background: #1a1a1a;
-      width: 100%;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #888;
+    .terminal {
+      max-width: 900px;
+      margin: auto;
+      background-color: #000;
+      border: 2px solid #33ff33;
+      padding: 2rem;
+      box-shadow: 0 0 20px #33ff33;
     }
-    .project {
-      margin-bottom: 1.5rem;
+    .line::before {
+      content: "$ ";
+      color: #33ff33;
+    }
+    a {
+      color: #00ffff;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    nav {
+      margin-bottom: 2rem;
+    }
+    nav a {
+      margin-right: 1rem;
+    }
+    .section {
+      margin-top: 2rem;
+    }
+    html {
+      scroll-behavior: smooth;
     }
     @media (max-width: 600px) {
-      header, section, footer {
+      body {
         padding: 1rem;
       }
     }
   </style>
 </head>
 <body>
-  <header>
-    <div>WRAITHJACK</div>
+  <div class="terminal">
+    <div class="line">Welcome to <strong>WRAITHJACK</strong>'s terminal portfolio.</div>
     <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+      <div class="line"><a href="#about">about</a> | <a href="#projects">projects</a> | <a href="#contact">contact</a></div>
     </nav>
-  </header>
 
-  <section id="about">
-    <h2>About Me</h2>
-    <p>I'm a cybersecurity student focused on ethical hacking, penetration testing, and protecting digital systems. Currently studying at SNHU, building skills with TryHackMe, Hack The Box, and pursuing certifications like Security+ and eJPT.</p>
-  </section>
-
-  <section id="projects">
-    <h2>Projects & Labs</h2>
-    <div class="project">
-      <strong>TryHackMe: Blue</strong>
-      <p>Windows box focused on SMB enumeration and exploitation.</p>
+    <div class="section" id="about">
+      <div class="line"><strong>about</strong></div>
+      <div class="line">I'm a cybersecurity student focused on ethical hacking, penetration testing, and digital defense. I study at SNHU and gain hands-on experience with platforms like TryHackMe and Hack The Box. Currently working toward certifications such as Security+ and eJPT.</div>
     </div>
-    <div class="project">
-      <strong>Hack The Box: Lame</strong>
-      <p>Classic Linux exploitation using Nmap and Metasploit.</p>
+
+    <div class="section" id="projects">
+      <div class="line"><strong>projects</strong></div>
+      <div class="line">TryHackMe: Blue - Windows SMB enumeration and exploitation.</div>
+      <div class="line">Hack The Box: Lame - Linux enumeration and classic metasploit box.</div>
+      <!-- Add more lines for future projects -->
     </div>
-    <!-- Add more projects as you complete them -->
-  </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email me at <a href="mailto:you@wraithjack.com">you@wraithjack.com</a></p>
-    <p><a href="/resume.pdf" target="_blank">Download My Resume</a></p>
-  </section>
-
-  <footer>
-    &copy; 2025 Wraithjack. All rights reserved.
-  </footer>
+    <div class="section" id="contact">
+      <div class="line"><strong>contact</strong></div>
+      <div class="line">Email: <a href="mailto:you@wraithjack.com">you@wraithjack.com</a></div>
+      <div class="line"><a href="/resume.pdf" target="_blank">Download Resume</a></div>
+    </div>
+  </div>
 </body>
 </html>
