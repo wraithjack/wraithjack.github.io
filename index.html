@@ -3,22 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Welcome to WraithJack</title>
-  <link rel="stylesheet" href="styles.css">
+  <meta name="description" content="Wraithjack - Cybersecurity Portfolio">
+  <title>Wraithjack</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Share Tech Mono', monospace;
+      background-color: #0f0f0f;
+      color: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    header {
+      width: 100%;
+      padding: 1rem;
+      background: #1a1a1a;
+      text-align: center;
+      font-size: 2rem;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: #00ffcc;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      max-width: 800px;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    footer {
+      padding: 1rem;
+      background: #1a1a1a;
+      width: 100%;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    .project {
+      margin-bottom: 1.5rem;
+    }
+    @media (max-width: 600px) {
+      header, section, footer {
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <header>
-    <h1>Welcome to WraithJack!</h1>
-    <p>Your future cybersecurity blog/portfolio site.</p>
+    <div>WRAITHJACK</div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
-  
-  <section>
+
+  <section id="about">
     <h2>About Me</h2>
-    <p>I'm Michael, a cybersecurity enthusiast learning to build cool stuff online!</p>
+    <p>I'm a cybersecurity student focused on ethical hacking, penetration testing, and protecting digital systems. Currently studying at SNHU, building skills with TryHackMe, Hack The Box, and pursuing certifications like Security+ and eJPT.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects & Labs</h2>
+    <div class="project">
+      <strong>TryHackMe: Blue</strong>
+      <p>Windows box focused on SMB enumeration and exploitation.</p>
+    </div>
+    <div class="project">
+      <strong>Hack The Box: Lame</strong>
+      <p>Classic Linux exploitation using Nmap and Metasploit.</p>
+    </div>
+    <!-- Add more projects as you complete them -->
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email me at <a href="mailto:you@wraithjack.com">you@wraithjack.com</a></p>
+    <p><a href="/resume.pdf" target="_blank">Download My Resume</a></p>
   </section>
 
   <footer>
-    <p>Contact: michael@wraithjack.com</p>
+    &copy; 2025 Wraithjack. All rights reserved.
   </footer>
 </body>
 </html>
