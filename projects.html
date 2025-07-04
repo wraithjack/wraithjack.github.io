@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Projects | Wraithjack Cybersecurity Portfolio">
+  <title>Projects | Wraithjack</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="terminal.css">
+</head>
+<body>
+  <div class="terminal">
+    <div class="terminal-header">
+      wraithjack@kali:~$ ls -la projects/ && cat projects/*.md
+    </div>
+    
+    <div class="terminal-body">
+      <div class="breadcrumb">
+        <a href="index.html">~</a> / projects/
+      </div>
+      
+      <div class="content-section">
+        <h2># Security Projects & CTF Writeups</h2>
+        
+        <div class="line">
+          <span class="prompt">└─$</span>
+          <span class="command">find ./projects -name "*.md" -type f | wc -l</span>
+        </div>
+        <div class="output-block">
+          12 completed projects found
+        </div>
+        
+        <div class="project-grid">
+          <div class="project-card featured">
+            <div class="project-header">
+              <h3>TryHackMe: Blue</h3>
+              <div class="project-tags">
+                <span class="tag windows">Windows</span>
+                <span class="tag smb">SMB</span>
+                <span class="tag metasploit">Metasploit</span>
+              </div>
+            </div>
+            <div class="project-desc">
+              Complete walkthrough of the Blue room focusing on EternalBlue exploitation. Covers SMB enumeration, vulnerability identification, and post-exploitation techniques on Windows systems.
+            </div>
+            <div class="project-commands">
+              <div class="cmd-line">$ nmap -sC -sV -oN blue.nmap 10.10.x.x</div>
+              <div class="cmd-line">$ msfconsole -q</div>
+              <div class="cmd-line">msf6 > use exploit/windows/smb/ms17_010_eternalblue</div>
+            </div>
+            <div class="project-footer">
+              <span class="difficulty hard">Difficulty: Medium</span>
+              <a href="#" class="view-writeup">View Writeup →</a>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Hack The Box: Lame</h3>
+              <div class="project-tags">
+                <span class="tag linux">Linux</span>
+                <span class="tag samba">Samba</span>
+                <span class="tag rce">RCE</span>
+              </div>
+            </div>
+            <div class="project-desc">
+              Classic HTB machine demonstrating Samba exploitation and privilege escalation. Perfect introduction to Linux enumeration and basic exploitation techniques.
+            </div>
+            <div class="project-commands">
+              <div class="cmd-line">$ enum4linux -a 10.10.10.3</div>
+              <div class="cmd-line">$ smbclient -L //10.10.10.3</div>
+            </div>
+            <div class="project-footer">
+              <span class="difficulty easy">Difficulty: Easy</span>
+              <a href="#" class="view-writeup">View Writeup →</a>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Custom Vulnerability Scanner</h3>
+              <div class="project-tags">
+                <span class="tag python">Python</span>
+                <span class="tag automation">Automation</span>
+                <span class="tag nmap">Nmap</span>
+              </div>
+            </div>
+            <div class="project-desc">
+              Python-based vulnerability scanner that automates network discovery, port scanning, and basic vulnerability detection. Integrates with multiple security tools.
+            </div>
+            <div class="project-commands">
+              <div class="cmd-line">$ python3 vuln_scanner.py -t 192.168.1.0/24</div>
+              <div class="cmd-line">$ ./scanner.py --full-scan --output json</div>
+            </div>
+            <div class="project-footer">
+              <span class="difficulty hard">Difficulty: Advanced</span>
+              <a href="#" class="view-code">View Code →</a>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Active Directory Lab</h3>
+              <div class="project-tags">
+                <span class="tag windows">Windows</span>
+                <span class="tag ad">Active Directory</span>
+                <span class="tag bloodhound">BloodHound</span>
+              </div>
+            </div>
+            <div class="project-desc">
+              Home lab setup simulating enterprise AD environment. Includes domain controllers, workstations, and various attack scenarios for red team practice.
+            </div>
+            <div class="project-commands">
+              <div class="cmd-line">$ bloodhound-python -u user -p pass -d domain.local</div>
+              <div class="cmd-line">$ impacket-secretsdump domain/user@dc.domain.local</div>
+            </div>
+            <div class="project-footer">
+              <span class="difficulty hard">Difficulty: Advanced</span>
+              <a href="#" class="view-writeup">View Setup →</a>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Web App Penetration Test</h3>
+              <div class="project-tags">
+                <span class="tag webapp">Web App</span>
+                <span class="tag burp">Burp Suite</span>
+                <span class="tag owasp">OWASP</span>
+              </div>
+            </div>
+            <div class="project-desc">
+              Comprehensive security assessment of a vulnerable web application. Covers OWASP Top 10 vulnerabilities including SQL injection, XSS, and authentication bypasses.
+            </div>
+            <div class="project-commands">
+              <div class="cmd-line">$ gobuster dir -u http://target.com -w wordlist.txt</div>
+              <div class="cmd-line">$ sqlmap -u "http://target.com/page?id=1" --dbs</div>
+            </div>
+            <div class="project-footer">
+              <span class="difficulty medium">Difficulty: Medium</span>
+              <a href="#" class="view-writeup">View Report →</a>
+            </div>
+          </div>
+          
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Network Forensics Challenge</h3>
+              <div class="project-tags">
+                <span class="tag forensics">Forensics</span>
+                <span class="tag wireshark">Wireshark</span>
+                <span class="tag pcap">PCAP</span>
+              </div>
+            </div>
+            <div class="project-desc">
+              Analysis of network traffic to identify malicious activity. Includes packet analysis, protocol dissection, and evidence extraction from PCAP files.
+            </div>
+            <div class="project-commands">
+              <div class="cmd-line">$ tshark -r capture.pcap -Y "http.request.method==POST"</div>
+              <div class="cmd-line">$ tcpdump -r capture.pcap -A | grep -i password</div>
+            </div>
+            <div class="project-footer">
+              <span class="difficulty medium">Difficulty: Medium</span>
+              <a href="#" class="view-writeup">View Analysis →</a>
+            </div>
+          </div>
+        </div>
+        
+        <div class="stats-section">
+          <h3>## Statistics</h3>
+          <div class="line">
+            <span class="prompt">└─$</span>
+            <span class="command">cat /home/wraithjack/.stats</span>
+          </div>
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="stat-number">47</div>
+              <div class="stat-label">TryHackMe Rooms</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">12</div>
+              <div class="stat-label">HTB Machines</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">8</div>
+              <div class="stat-label">CVEs Discovered</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">156</div>
+              <div class="stat-label">GitHub Commits</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="navigation">
+          <a href="about.html" class="nav-btn">← About Me</a>
+          <a href="index.html" class="nav-btn">Terminal Home</a>
+          <a href="blog.html" class="nav-btn">Blog →</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="status-bar">
+      <span>Directory: ~/projects/ | Files: 12 | Total Size: 15.7MB</span>
+      <span>Last Modified: 2024-12-19</span>
+    </div>
+  </div>
+</body>
+</html>

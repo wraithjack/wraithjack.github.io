@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Blog | Wraithjack Security Research">
+  <title>Blog | Wraithjack</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="terminal.css">
+</head>
+<body>
+  <div class="terminal">
+    <div class="terminal-header">
+      wraithjack@kali:~$ tail -f /var/log/security_research.log
+    </div>
+    
+    <div class="terminal-body">
+      <div class="breadcrumb">
+        <a href="index.html">~</a> / blog/
+      </div>
+      
+      <div class="content-section">
+        <h2># Security Research & Tutorials</h2>
+        
+        <div class="line">
+          <span class="prompt">└─$</span>
+          <span class="command">ls -lt blog/ | head -10</span>
+        </div>
+        <div class="output-block">
+          Latest security research, tutorials, and threat analysis
+        </div>
+        
+        <div class="blog-posts">
+          <article class="blog-post featured">
+            <div class="post-header">
+              <h3>Understanding Buffer Overflows: From Theory to Exploitation</h3>
+              <div class="post-meta">
+                <span class="date">2024-12-15</span>
+                <span class="category">Tutorial</span>
+                <span class="read-time">12 min read</span>
+              </div>
+            </div>
+            <div class="post-excerpt">
+              Deep dive into buffer overflow vulnerabilities, covering stack-based overflows, shellcode development, and modern exploitation techniques. Includes practical examples and mitigation strategies.
+            </div>
+            <div class="post-commands">
+              <div class="cmd-line">$ gdb -q ./vulnerable_program</div>
+              <div class="cmd-line">(gdb) run $(python -c "print 'A'*140 + '\x8f\x35\x4a\x5f'")</div>
+            </div>
+            <div class="post-tags">
+              <span class="tag">Binary Exploitation</span>
+              <span class="tag">Assembly</span>
+              <span class="tag">GDB</span>
+            </div>
+            <a href="#" class="read-more">Read Full Article →</a>
+          </article>
+          
+          <article class="blog-post">
+            <div class="post-header">
+              <h3>Active Directory Enumeration with BloodHound</h3>
+              <div class="post-meta">
+                <span class="date">2024-12-08</span>
+                <span class="category">Red Team</span>
+                <span class="read-time">8 min read</span>
+              </div>
+            </div>
+            <div class="post-excerpt">
+              Complete guide to using BloodHound for Active Directory enumeration and attack path discovery. Learn to identify privilege escalation opportunities and lateral movement paths.
+            </div>
+            <div class="post-commands">
+              <div class="cmd-line">$ bloodhound-python -u user -p pass -d corp.local -c all</div>
+            </div>
+            <div class="post-tags">
+              <span class="tag">Active Directory</span>
+              <span class="tag">BloodHound</span>
+              <span class="tag">Enumeration</span>
+            </div>
+            <a href="#" class="read-more">Read Full Article →</a>
+          </article>
+          
+          <article class="blog-post">
+            <div class="post-header">
+              <h3>Building a Home Cybersecurity Lab on a Budget</h3>
+              <div class="post-meta">
+                <span class="date">2024-11-28</span>
+                <span class="category">Tutorial</span>
+                <span class="read-time">15 min read</span>
+              </div>
+            </div>
+            <div class="post-excerpt">
+              Step-by-step guide to creating a comprehensive cybersecurity lab environment using VirtualBox, pfSense, and various vulnerable machines. Perfect for students and professionals.
+            </div>
+            <div class="post-commands">
+              <div class="cmd-line">$ vagrant up kali-linux windows-10 metasploitable</div>
+            </div>
+            <div class="post-tags">
+              <span class="tag">Home Lab</span>
+              <span class="tag">Virtualization</span>
+              <span class="tag">Setup Guide</span>
+            </div>
+            <a href="#" class="read-more">Read Full Article →</a>
+          </article>
+          
+          <article class="blog-post">
+            <div class="post-header">
+              <h3>OSINT Techniques for Cybersecurity Professionals</h3>
+              <div class="post-meta">
+                <span class="date">2024-11-15</span>
+                <span class="category">OSINT</span>
+                <span class="read-time">10 min read</span>
+              </div>
+            </div>
+            <div class="post-excerpt">
+              Comprehensive overview of Open Source Intelligence gathering techniques, tools, and methodologies for security assessments and threat hunting operations.
+            </div>
+            <div class="post-commands">
+              <div class="cmd-line">$ theHarvester -d target.com -b google,bing,linkedin</div>
+            </div>
+            <div class="post-tags">
+              <span class="tag">OSINT</span>
+              <span class="tag">Reconnaissance</span>
+              <span class="tag">Threat Hunting</span>
+            </div>
+            <a href="#" class="read-more">Read Full Article →</a>
+          </article>
+          
+          <article class="blog-post">
+            <div class="post-header">
+              <h3>Web Application Security: Beyond OWASP Top 10</h3>
+              <div class="post-meta">
+                <span class="date">2024-10-30</span>
+                <span class="category">Web Security</span>
+                <span class="read-time">14 min read</span>
+              </div>
+            </div>
+            <div class="post-excerpt">
+              Advanced web application security testing techniques including business logic flaws, race conditions, and modern framework vulnerabilities that go beyond traditional OWASP categories.
+            </div>
+            <div class="post-commands">
+              <div class="cmd-line">$ burpsuite --config-file=custom_config.json</div>
+            </div>
+            <div class="post-tags">
+              <span class="tag">Web Security</span>
+              <span class="tag">Burp Suite</span>
+              <span class="tag">Advanced Testing</span>
+            </div>
+            <a href="#" class="read-more">Read Full Article →</a>
+          </article>
+        </div>
+        
+        <div class="categories-section">
+          <h3>## Categories</h3>
+          <div class="line">
+            <span class="prompt">└─$</span>
+            <span class="command">find blog/ -name "*.md" | xargs grep -l "category:" | sort | uniq -c</span>
+          </div>
+          <div class="categories-grid">
+            <div class="category-item">
+              <div class="category-name">Tutorials</div>
+              <div class="category-count">8 posts</div>
+            </div>
+            <div class="category-item">
+              <div class="category-name">Red Team</div>
+              <div class="category-count">5 posts</div>
+            </div>
+            <div class="category-item">
+              <div class="category-name">Web Security</div>
+              <div class="category-count">4 posts</div>
+            </div>
+            <div class="category-item">
+              <div class="category-name">OSINT</div>
+              <div class="category-count">3 posts</div>
+            </div>
+            <div class="category-item">
+              <div class="category-name">Forensics</div>
+              <div class="category-count">2 posts</div>
+            </div>
+            <div class="category-item">
+              <div class="category-name">Malware Analysis</div>
+              <div class="category-count">2 posts</div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="rss-section">
+          <div class="line">
+            <span class="prompt">└─$</span>
+            <span class="command">curl -s https://wraithjack.com/rss.xml | head -5</span>
+          </div>
+          <div class="output-block">
+            Subscribe to RSS feed for latest security research and tutorials
+            <a href="#" class="rss-link">📡 RSS Feed</a>
+          </div>
+        </div>
+        
+        <div class="navigation">
+          <a href="projects.html" class="nav-btn">← Projects</a>
+          <a href="index.html" class="nav-btn">Terminal Home</a>
+          <a href="contact.html" class="nav-btn">Contact →</a>
+        </div>
+      </div>
+    </div>
+    
+    <div class="status-bar">
+      <span>Blog: 24 posts | Categories: 6 | Last Updated: 2024-12-15</span>
+      <span>RSS: Active | Subscribers: 247</span>
+    </div>
+  </div>
+</body>
+</html>

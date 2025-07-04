@@ -3,83 +3,212 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Wraithjack - Cybersecurity Portfolio">
-  <title>Wraithjack</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      margin: 0;
-      font-family: 'Fira Code', monospace;
-      background-color: #0d0d0d;
-      color: #33ff33;
-      padding: 2rem;
-      line-height: 1.6;
-    }
-    .terminal {
-      max-width: 900px;
-      margin: auto;
-      background-color: #000;
-      border: 2px solid #33ff33;
-      padding: 2rem;
-      box-shadow: 0 0 20px #33ff33;
-    }
-    .line::before {
-      content: "$ ";
-      color: #33ff33;
-    }
-    a {
-      color: #00ffff;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    nav {
-      margin-bottom: 2rem;
-    }
-    nav a {
-      margin-right: 1rem;
-    }
-    .section {
-      margin-top: 2rem;
-    }
-    html {
-      scroll-behavior: smooth;
-    }
-    @media (max-width: 600px) {
-      body {
-        padding: 1rem;
-      }
-    }
-  </style>
+  <meta name="description" content="Wraithjack - Cybersecurity Professional & Ethical Hacker">
+  <meta property="og:title" content="Wraithjack - Cybersecurity Professional">
+  <meta property="og:description" content="SNHU Cybersecurity Student | Penetration Testing | Digital Forensics">
+  <meta property="og:type" content="website">
+  <title>Wraithjack Terminal</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="terminal.css">
 </head>
 <body>
   <div class="terminal">
-    <div class="line">Welcome to <strong>WRAITHJACK</strong>'s terminal portfolio.</div>
-    <nav>
-      <div class="line"><a href="#about">about</a> | <a href="#projects">projects</a> | <a href="#contact">contact</a></div>
-    </nav>
-
-    <div class="section" id="about">
-      <div class="line"><strong>about</strong></div>
-      <div class="line">I'm a cybersecurity student focused on ethical hacking, penetration testing, and digital defense. I study at SNHU and gain hands-on experience with platforms like TryHackMe and Hack The Box. Currently working toward certifications such as Security+ and eJPT.</div>
+    <div class="terminal-header">
+      <div class="terminal-controls">
+        <span class="control close"></span>
+        <span class="control minimize"></span>
+        <span class="control maximize"></span>
+      </div>
+      <div class="terminal-title">wraithjack@kali:~$</div>
+      <div class="system-info">
+        <span class="uptime" id="uptime">uptime: 00:00:00</span>
+        <span class="load">load: 0.42</span>
+        <span class="users">users: 1</span>
+      </div>
     </div>
-
-    <div class="section" id="projects">
-      <div class="line"><strong>projects</strong></div>
-      <div class="line">TryHackMe: Blue - Windows SMB enumeration and exploitation.</div>
-      <div class="line">Hack The Box: Lame - Linux enumeration and classic metasploit box.</div>
-      <!-- Add more lines for future projects -->
+    
+    <div class="terminal-body">
+      <div class="boot-sequence">
+        <div class="boot-line">[ OK ] Started Terminal Session</div>
+        <div class="boot-line">[ OK ] Loaded User Profile: wraithjack</div>
+        <div class="boot-line">[ OK ] Network Interface: eth0 UP</div>
+      </div>
+      
+      <div class="main-prompt">
+        <div class="line">
+          <span class="prompt">┌──(wraithjack㉿kali)-[~]</span>
+        </div>
+        <div class="line">
+          <span class="prompt">└─$</span>
+          <span class="command">whoami && id</span>
+        </div>
+      </div>
+      
+      <div class="user-info">
+        <div class="output-line">wraithjack</div>
+        <div class="output-line">uid=1000(wraithjack) gid=1000(wraithjack) groups=1000(wraithjack),27(sudo),116(wireshark)</div>
+      </div>
+      
+      <div class="ascii-banner">
+        <pre>
+██╗    ██╗██████╗  █████╗ ██╗████████╗██╗  ██╗     ██╗ █████╗  ██████╗██╗  ██╗
+██║    ██║██╔══██╗██╔══██╗██║╚══██╔══╝██║  ██║     ██║██╔══██╗██╔════╝██║ ██╔╝
+██║ █╗ ██║██████╔╝███████║██║   ██║   ███████║     ██║███████║██║     █████╔╝ 
+██║███╗██║██╔══██╗██╔══██║██║   ██║   ██╔══██║██   ██║██╔══██║██║     ██╔═██╗ 
+╚███╔███╔╝██║  ██║██║  ██║██║   ██║   ██║  ██║╚█████╔╝██║  ██║╚██████╗██║  ██╗
+ ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝   ╚═╝   ╚═╝  ╚═╝ ╚════╝ ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
+        </pre>
+      </div>
+      
+      <div class="business-card">
+        <div class="line">
+          <span class="prompt">└─$</span>
+          <span class="command">cat /home/wraithjack/.profile</span>
+        </div>
+        
+        <div class="profile-content">
+          <div class="profile-section">
+            <div class="section-header"># CYBERSECURITY PROFESSIONAL</div>
+            <div class="profile-line"><span class="key">Name:</span> Wraithjack</div>
+            <div class="profile-line"><span class="key">Role:</span> Cybersecurity Student & Ethical Hacker</div>
+            <div class="profile-line"><span class="key">Education:</span> Southern New Hampshire University</div>
+            <div class="profile-line"><span class="key">Specialization:</span> Penetration Testing | Digital Forensics | Threat Analysis</div>
+          </div>
+          
+          <div class="profile-section">
+            <div class="section-header"># CURRENT OBJECTIVES</div>
+            <div class="profile-line"><span class="key">Certifications:</span> Security+ | eJPT | OSCP (In Progress)</div>
+            <div class="profile-line"><span class="key">Platforms:</span> TryHackMe | Hack The Box | VulnHub</div>
+            <div class="profile-line"><span class="key">Focus Areas:</span> Red Team Operations | Incident Response</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="navigation-section">
+        <div class="line">
+          <span class="prompt">└─$</span>
+          <span class="command">ls -la /home/wraithjack/</span>
+        </div>
+        
+        <div class="file-listing">
+          <div class="file-header">
+            <span>total 24</span>
+          </div>
+          <div class="file-line">
+            <span class="permissions">drwxr-xr-x</span>
+            <span class="links">2</span>
+            <span class="owner">wraithjack</span>
+            <span class="group">wraithjack</span>
+            <span class="size">4096</span>
+            <span class="date">Dec 19 15:30</span>
+            <a href="about.html" class="file-link">about.md</a>
+          </div>
+          <div class="file-line">
+            <span class="permissions">drwxr-xr-x</span>
+            <span class="links">3</span>
+            <span class="owner">wraithjack</span>
+            <span class="group">wraithjack</span>
+            <span class="size">4096</span>
+            <span class="date">Dec 19 14:22</span>
+            <a href="projects.html" class="file-link">projects/</a>
+          </div>
+          <div class="file-line">
+            <span class="permissions">-rw-r--r--</span>
+            <span class="links">1</span>
+            <span class="owner">wraithjack</span>
+            <span class="group">wraithjack</span>
+            <span class="size">2048</span>
+            <span class="date">Dec 19 16:45</span>
+            <a href="blog.html" class="file-link">blog.md</a>
+          </div>
+          <div class="file-line">
+            <span class="permissions">-rw-r--r--</span>
+            <span class="links">1</span>
+            <span class="owner">wraithjack</span>
+            <span class="group">wraithjack</span>
+            <span class="size">1024</span>
+            <span class="date">Dec 19 12:15</span>
+            <a href="contact.html" class="file-link">contact.md</a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="quick-stats">
+        <div class="line">
+          <span class="prompt">└─$</span>
+          <span class="command">ps aux | grep -E "(projects|skills)" | wc -l</span>
+        </div>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-value">47</div>
+            <div class="stat-label">THM Rooms</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">12</div>
+            <div class="stat-label">HTB Machines</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">156</div>
+            <div class="stat-label">Git Commits</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value">24</div>
+            <div class="stat-label">Blog Posts</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="command-prompt">
+        <div class="line">
+          <span class="prompt">└─$</span>
+          <span class="command typing-cursor">_</span>
+        </div>
+      </div>
     </div>
-
-    <div class="section" id="contact">
-      <div class="line"><strong>contact</strong></div>
-      <div class="line">Email: <a href="mailto:you@wraithjack.com">you@wraithjack.com</a></div>
-      <div class="line"><a href="/resume.pdf" target="_blank">Download Resume</a></div>
+    
+    <div class="status-bar">
+      <div class="status-left">
+        <span>wraithjack.com</span>
+        <span class="separator">|</span>
+        <span>Kali Linux 2024.4</span>
+      </div>
+      <div class="status-right">
+        <span id="current-time">00:00:00</span>
+        <span class="separator">|</span>
+        <span>UTC</span>
+      </div>
     </div>
   </div>
+
+  <script>
+    // Update uptime and current time
+    function updateTime() {
+      const now = new Date();
+      const timeString = now.toLocaleTimeString('en-US', { hour12: false });
+      document.getElementById('current-time').textContent = timeString;
+      
+      // Simple uptime simulation
+      const startTime = new Date(now.getTime() - (Math.random() * 86400000)); // Random uptime up to 24 hours
+      const uptime = Math.floor((now - startTime) / 1000);
+      const hours = Math.floor(uptime / 3600);
+      const minutes = Math.floor((uptime % 3600) / 60);
+      const seconds = uptime % 60;
+      document.getElementById('uptime').textContent = 
+        `uptime: ${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    }
+    
+    setInterval(updateTime, 1000);
+    updateTime();
+    
+    // Boot sequence animation
+    document.addEventListener('DOMContentLoaded', function() {
+      const bootLines = document.querySelectorAll('.boot-line');
+      bootLines.forEach((line, index) => {
+        setTimeout(() => {
+          line.style.opacity = '1';
+        }, index * 200);
+      });
+    });
+  </script>
 </body>
 </html>
