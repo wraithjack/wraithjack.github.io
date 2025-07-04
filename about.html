@@ -16,10 +16,10 @@
         <span class="control minimize"></span>
         <span class="control maximize"></span>
       </div>
-      <div class="terminal-title">wraithjack@kali:~$ cat about.md</div>
+      <div class="terminal-title">wraithjack@kali:~$ cat /home/wraithjack/.profile</div>
       <div class="system-info">
-        <span>about.md</span>
-        <span>2.1KB</span>
+        <span>.profile</span>
+        <span>2.3KB</span>
       </div>
     </div>
     
@@ -34,104 +34,67 @@
       </div>
       
       <div class="breadcrumb">
-        <a href="index.html">~</a> / about.md
+        <a href="index.html">~</a> / .profile
       </div>
       
       <div class="content-section">
-        <h2># About Me</h2>
-        
-        <div class="line">
-          <span class="prompt">└─$</span>
-          <span class="command">uname -a</span>
-        </div>
-        <div class="output-block">
-          Cybersecurity Student 5.4.0-kali #1 SMP x86_64 GNU/Linux
-        </div>
-        
-        <div class="text-block">
-          I'm a dedicated cybersecurity student at Southern New Hampshire University, passionate about ethical hacking and digital defense. My journey into cybersecurity began with a fascination for understanding how systems work—and more importantly, how they can be secured.
+        <div class="terminal-prompt">
+          <div class="line">
+            <span class="prompt">┌──(wraithjack㉿kali)-[~]</span>
+          </div>
+          <div class="line">
+            <span class="prompt">└─$</span>
+            <span class="command">cat /home/wraithjack/.profile</span>
+          </div>
         </div>
         
-        <h3>## Current Focus</h3>
-        <div class="skill-grid">
-          <div class="skill-item">
-            <div class="skill-header">Penetration Testing</div>
-            <div class="skill-desc">Web app security, network enumeration, vulnerability assessment</div>
+        <div class="profile-output">
+          <div class="profile-header"># /etc/motd – Cybersecurity Student & Ethical Hacker</div>
+          
+          <div class="profile-section">
+            <div class="profile-line"><span class="profile-key">Name:</span>       Michael Soden</div>
+            <div class="profile-line"><span class="profile-key">Alias:</span>      wraithjack</div>
+            <div class="profile-line"><span class="profile-key">Role:</span>       Cybersecurity Student | Ethical Hacker</div>
+            <div class="profile-line"><span class="profile-key">Education:</span>  Southern New Hampshire University</div>
+            <div class="profile-line"><span class="profile-key">Focus:</span>      Penetration Testing | Digital Forensics | Threat Analysis</div>
           </div>
           
-          <div class="skill-item">
-            <div class="skill-header">Digital Forensics</div>
-            <div class="skill-desc">Incident response, malware analysis, evidence collection</div>
+          <div class="profile-section">
+            <div class="section-title"># Current Projects:</div>
+            <div class="list-item">- Building a home lab for pentesting and forensics</div>
+            <div class="list-item">- Daily challenges on TryHackMe and Hack The Box</div>
+            <div class="list-item">- Writing a blog series on getting started in ethical hacking</div>
           </div>
           
-          <div class="skill-item">
-            <div class="skill-header">Threat Analysis</div>
-            <div class="skill-desc">OSINT, threat hunting, security monitoring</div>
+          <div class="profile-section">
+            <div class="section-title"># Certifications:</div>
+            <div class="cert-item completed">✓ Google IT Support Professional</div>
+            <div class="cert-item progress">→ Network+ (in progress)</div>
+            <div class="cert-item progress">→ Security+ (in progress)</div>
           </div>
           
-          <div class="skill-item">
-            <div class="skill-header">Red Team Operations</div>
-            <div class="skill-desc">Social engineering, physical security, adversary simulation</div>
-          </div>
-        </div>
-        
-        <h3>## Education & Certifications</h3>
-        <div class="line">
-          <span class="prompt">└─$</span>
-          <span class="command">ls -la /home/wraithjack/certifications/</span>
-        </div>
-        <div class="output-block">
-          -rw-r--r-- 1 wraithjack wraithjack 4096 Dec 2024 google_it_support_professional.cert
-          -rw-r--r-- 1 wraithjack wraithjack 2048 Dec 2024 security_plus.prep
-          -rw-r--r-- 1 wraithjack wraithjack 1024 Dec 2024 network_plus.prep
-          -rw-r--r-- 1 wraithjack wraithjack 8192 Dec 2024 snhu_cybersecurity.progress
-        </div>
-        
-        <div class="text-block">
-          Currently pursuing my Bachelor's in Cybersecurity at SNHU while actively preparing for industry certifications. I believe in hands-on learning and regularly practice on platforms like TryHackMe and Hack The Box to sharpen my skills.
-        </div>
-        
-        <h3>## Technical Arsenal</h3>
-        <div class="line">
-          <span class="prompt">└─$</span>
-          <span class="command">which nmap metasploit burpsuite wireshark</span>
-        </div>
-        <div class="output-block">
-          /usr/bin/nmap
-          /usr/bin/msfconsole
-          /usr/bin/burpsuite
-          /usr/bin/wireshark
-        </div>
-        
-        <div class="tech-categories">
-          <div class="tech-category">
-            <h4>Penetration Testing</h4>
-            <ul>
-              <li>Nmap, Masscan, Rustscan</li>
-              <li>Metasploit, Cobalt Strike</li>
-              <li>Burp Suite, OWASP ZAP</li>
-              <li>SQLmap, Gobuster, Ffuf</li>
-            </ul>
+          <div class="profile-section">
+            <div class="section-title"># About Me:</div>
+            <div class="about-text">I'm a lifelong learner with a knack for solving problems and thinking like an attacker. My mission? Protect people, challenge systems, and fight for justice in the digital world.</div>
           </div>
           
-          <div class="tech-category">
-            <h4>Operating Systems</h4>
-            <ul>
-              <li>Kali Linux, Parrot OS</li>
-              <li>Windows Server, Active Directory</li>
-              <li>Ubuntu, CentOS, RHEL</li>
-              <li>VMware, VirtualBox</li>
-            </ul>
+          <div class="profile-section">
+            <div class="section-title"># Goals:</div>
+            <div class="goal-item">→ Land a role in penetration testing or red teaming</div>
+            <div class="goal-item">→ Use cyber skills to defend AI systems & critical infrastructure</div>
+            <div class="goal-item">→ Break into federal cybersecurity work (literally and figuratively)</div>
           </div>
           
-          <div class="tech-category">
-            <h4>Programming & Scripting</h4>
-            <ul>
-              <li>Python, Bash, PowerShell</li>
-              <li>JavaScript, PHP</li>
-              <li>SQL, NoSQL</li>
-              <li>Git, Docker</li>
-            </ul>
+          <div class="profile-section">
+            <div class="section-title"># Contact:</div>
+            <div class="contact-text">See the contact tab or hit me up on LinkedIn.</div>
+          </div>
+          
+          <div class="terminal-prompt">
+            <div class="line">
+              <span class="prompt">└─$</span>
+              <span class="command typing-cursor">_</span>
+            </div>
           </div>
         </div>
         
@@ -143,9 +106,104 @@
     </div>
     
     <div class="status-bar">
-      <span>File: about.md | Lines: 42 | Size: 2.1KB</span>
+      <span>File: .profile | Lines: 28 | Size: 2.3KB</span>
       <span>Mode: READ | Encoding: UTF-8</span>
     </div>
   </div>
+
+  <style>
+    .terminal-prompt {
+      margin: 1rem 0;
+    }
+    
+    .profile-output {
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid #333;
+      border-radius: 4px;
+      padding: 1.5rem;
+      margin: 1rem 0;
+      font-family: 'Fira Code', monospace;
+      line-height: 1.6;
+    }
+    
+    .profile-header {
+      color: #8b5cf6;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+    }
+    
+    .profile-section {
+      margin-bottom: 1.5rem;
+    }
+    
+    .profile-line {
+      color: #ffffff;
+      margin-bottom: 0.3rem;
+      display: flex;
+    }
+    
+    .profile-key {
+      color: #a855f7;
+      font-weight: 500;
+      min-width: 100px;
+      display: inline-block;
+    }
+    
+    .section-title {
+      color: #8b5cf6;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      font-size: 0.95rem;
+    }
+    
+    .list-item {
+      color: #ccc;
+      margin-bottom: 0.3rem;
+      padding-left: 0.5rem;
+    }
+    
+    .cert-item {
+      margin-bottom: 0.3rem;
+      padding-left: 0.5rem;
+      font-weight: 500;
+    }
+    
+    .cert-item.completed {
+      color: #22c55e;
+    }
+    
+    .cert-item.progress {
+      color: #fbbf24;
+    }
+    
+    .about-text {
+      color: #ccc;
+      line-height: 1.7;
+      padding-left: 0.5rem;
+    }
+    
+    .goal-item {
+      color: #c084fc;
+      margin-bottom: 0.3rem;
+      padding-left: 0.5rem;
+    }
+    
+    .contact-text {
+      color: #ccc;
+      padding-left: 0.5rem;
+    }
+    
+    @media (max-width: 768px) {
+      .profile-line {
+        flex-direction: column;
+      }
+      
+      .profile-key {
+        min-width: auto;
+        margin-bottom: 0.2rem;
+      }
+    }
+  </style>
 </body>
 </html>
