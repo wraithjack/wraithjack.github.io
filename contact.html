@@ -24,6 +24,15 @@
     </div>
     
     <div class="terminal-body">
+      <div class="taskbar">
+        <nav class="nav-menu">
+          <a href="about.html" class="nav-item">about</a>
+          <a href="projects.html" class="nav-item">projects</a>
+          <a href="blog.html" class="nav-item">blog</a>
+          <a href="contact.html" class="nav-item active">contact</a>
+        </nav>
+      </div>
+      
       <div class="breadcrumb">
         <a href="index.html">~</a> / contact.md
       </div>
@@ -339,17 +348,17 @@
     }
     
     .contact-item {
-      background: rgba(0, 255, 65, 0.05);
-      border: 1px solid rgba(0, 255, 65, 0.2);
+      background: rgba(139, 92, 246, 0.05);
+      border: 1px solid rgba(139, 92, 246, 0.2);
       border-radius: 6px;
       padding: 1.5rem;
       transition: all 0.3s ease;
     }
     
     .contact-item:hover {
-      background: rgba(0, 255, 65, 0.1);
+      background: rgba(139, 92, 246, 0.1);
       transform: translateY(-2px);
-      box-shadow: 0 4px 15px rgba(0, 255, 65, 0.2);
+      box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2);
     }
     
     .contact-header {
@@ -364,13 +373,13 @@
     }
     
     .contact-type {
-      color: #00ccff;
+      color: #a855f7;
       font-weight: 600;
       font-size: 1rem;
     }
     
     .contact-value {
-      color: #00ff41;
+      color: #8b5cf6;
       font-weight: 500;
       margin-bottom: 0.5rem;
       font-size: 0.95rem;
@@ -399,20 +408,20 @@
     }
     
     .platform-item {
-      background: rgba(0, 204, 255, 0.05);
-      border: 1px solid rgba(0, 204, 255, 0.2);
+      background: rgba(139, 92, 246, 0.05);
+      border: 1px solid rgba(139, 92, 246, 0.2);
       border-radius: 4px;
       padding: 1rem;
     }
     
     .platform-name {
-      color: #00ccff;
+      color: #8b5cf6;
       font-weight: 600;
       margin-bottom: 0.3rem;
     }
     
     .platform-handle {
-      color: #00ff41;
+      color: #a855f7;
       font-size: 0.9rem;
       margin-bottom: 0.5rem;
     }
@@ -442,8 +451,8 @@
       gap: 1rem;
       margin-bottom: 1rem;
       padding: 1rem;
-      background: rgba(255, 170, 0, 0.05);
-      border-left: 3px solid #ffaa00;
+      background: rgba(168, 85, 247, 0.05);
+      border-left: 3px solid #a855f7;
       border-radius: 0 4px 4px 0;
     }
     
@@ -453,7 +462,7 @@
     }
     
     .notice-title {
-      color: #ffaa00;
+      color: #a855f7;
       font-weight: 600;
       margin-bottom: 0.3rem;
     }
@@ -470,8 +479,8 @@
       gap: 1rem;
       margin: 1rem 0;
       padding: 1rem;
-      background: rgba(39, 202, 63, 0.05);
-      border: 1px solid rgba(39, 202, 63, 0.2);
+      background: rgba(139, 92, 246, 0.05);
+      border: 1px solid rgba(139, 92, 246, 0.2);
       border-radius: 4px;
     }
     
@@ -484,8 +493,8 @@
     }
     
     .status-indicator.online {
-      background: #27ca3f;
-      box-shadow: 0 0 8px rgba(39, 202, 63, 0.5);
+      background: #8b5cf6;
+      box-shadow: 0 0 8px rgba(139, 92, 246, 0.5);
       animation: pulse 2s infinite;
     }
     
@@ -495,7 +504,7 @@
     }
     
     .status-title {
-      color: #27ca3f;
+      color: #8b5cf6;
       font-weight: 600;
       margin-bottom: 0.5rem;
     }
@@ -514,7 +523,7 @@
     
     .availability-list li::before {
       content: "▸";
-      color: #00ff41;
+      color: #8b5cf6;
       position: absolute;
       left: 0;
     }
@@ -549,7 +558,7 @@
     }
     
     .form-label {
-      color: #00ccff;
+      color: #a855f7;
       font-weight: 500;
       font-size: 0.9rem;
     }
@@ -567,8 +576,8 @@
     
     .form-input:focus {
       outline: none;
-      border-color: #00ff41;
-      box-shadow: 0 0 8px rgba(0, 255, 65, 0.3);
+      border-color: #8b5cf6;
+      box-shadow: 0 0 8px rgba(139, 92, 246, 0.3);
     }
     
     .form-textarea {
@@ -577,11 +586,11 @@
     }
     
     .form-submit {
-      background: rgba(0, 255, 65, 0.1);
-      border: 1px solid #00ff41;
+      background: rgba(139, 92, 246, 0.1);
+      border: 1px solid #8b5cf6;
       border-radius: 4px;
       padding: 1rem;
-      color: #00ff41;
+      color: #8b5cf6;
       font-family: 'Fira Code', monospace;
       font-weight: 500;
       cursor: pointer;
@@ -593,8 +602,8 @@
     }
     
     .form-submit:hover:not(:disabled) {
-      background: rgba(0, 255, 65, 0.2);
-      box-shadow: 0 0 15px rgba(0, 255, 65, 0.4);
+      background: rgba(139, 92, 246, 0.2);
+      box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
       transform: translateY(-2px);
     }
     
