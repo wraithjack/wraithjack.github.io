@@ -229,48 +229,58 @@
           <h3>## Quick Contact</h3>
           <div class="line">
             <span class="prompt">└─$</span>
-            <span class="command">nc -l 443 < /dev/stdin</span>
+            <span class="command">mailto wraithjack@protonmail.com</span>
           </div>
           
-          <div class="contact-form">
-            <div class="form-note">
-              <span class="note-icon">ℹ️</span>
-              <span>Secure contact form - All messages encrypted in transit</span>
+          <div class="mailto-section">
+            <div class="mailto-note">
+              <span class="note-icon">📧</span>
+              <span>Click below to open your email client with a pre-filled message</span>
             </div>
             
-            <form class="terminal-form" onsubmit="handleFormSubmit(event)">
-              <div class="form-group">
-                <label class="form-label">Name:</label>
-                <input type="text" class="form-input" name="name" required>
-              </div>
+            <div class="mailto-options">
+              <a href="mailto:wraithjack@protonmail.com?subject=General%20Inquiry&body=Hi%20Michael,%0A%0AI%20found%20your%20portfolio%20and%20wanted%20to%20reach%20out%20about:%0A%0A[Please%20describe%20your%20inquiry%20here]%0A%0ABest%20regards," class="mailto-btn general">
+                <span class="btn-icon">💼</span>
+                <div class="btn-content">
+                  <div class="btn-title">General Inquiry</div>
+                  <div class="btn-desc">Professional opportunities, questions, etc.</div>
+                </div>
+              </a>
               
-              <div class="form-group">
-                <label class="form-label">Email:</label>
-                <input type="email" class="form-input" name="email" required>
-              </div>
+              <a href="mailto:wraithjack@protonmail.com?subject=Internship%20Opportunity&body=Hi%20Michael,%0A%0AI%20have%20an%20internship%20opportunity%20that%20might%20interest%20you:%0A%0A[Please%20describe%20the%20opportunity%20here]%0A%0ABest%20regards," class="mailto-btn internship">
+                <span class="btn-icon">🎯</span>
+                <div class="btn-content">
+                  <div class="btn-title">Internship Opportunity</div>
+                  <div class="btn-desc">Cybersecurity internships and entry-level roles</div>
+                </div>
+              </a>
               
-              <div class="form-group">
-                <label class="form-label">Subject:</label>
-                <select class="form-input" name="subject" required>
-                  <option value="">Select topic...</option>
-                  <option value="internship">Internship Opportunity</option>
-                  <option value="collaboration">Research Collaboration</option>
-                  <option value="ctf">CTF Team Invitation</option>
-                  <option value="general">General Inquiry</option>
-                  <option value="security">Security Issue</option>
-                </select>
-              </div>
+              <a href="mailto:wraithjack@protonmail.com?subject=Research%20Collaboration&body=Hi%20Michael,%0A%0AI%27d%20like%20to%20collaborate%20on%20security%20research:%0A%0A[Please%20describe%20your%20research%20idea%20here]%0A%0ABest%20regards," class="mailto-btn collaboration">
+                <span class="btn-icon">🔬</span>
+                <div class="btn-content">
+                  <div class="btn-title">Research Collaboration</div>
+                  <div class="btn-desc">Security research, CTF teams, projects</div>
+                </div>
+              </a>
               
-              <div class="form-group">
-                <label class="form-label">Message:</label>
-                <textarea class="form-input form-textarea" name="message" rows="5" required></textarea>
+              <a href="mailto:wraithjack@protonmail.com?subject=Security%20Issue&body=Hi%20Michael,%0A%0AI%20found%20a%20security%20issue%20I%27d%20like%20to%20report:%0A%0A[Please%20describe%20the%20security%20issue%20here]%0A%0ANote:%20Please%20include%20relevant%20details%20while%20following%20responsible%20disclosure%20practices.%0A%0ABest%20regards," class="mailto-btn security">
+                <span class="btn-icon">🛡️</span>
+                <div class="btn-content">
+                  <div class="btn-title">Security Issue</div>
+                  <div class="btn-desc">Responsible disclosure, vulnerability reports</div>
+                </div>
+              </a>
+            </div>
+            
+            <div class="direct-email">
+              <div class="line">
+                <span class="prompt">└─$</span>
+                <span class="command">echo "Or email directly:"</span>
               </div>
-              
-              <button type="submit" class="form-submit">
-                <span class="submit-text">Send Message</span>
-                <span class="submit-command">$ ./send_encrypted_message.sh</span>
-              </button>
-            </form>
+              <div class="email-direct">
+                <a href="mailto:wraithjack@protonmail.com" class="email-link">wraithjack@protonmail.com</a>
+              </div>
+            </div>
           </div>
         </div>
         
@@ -314,28 +324,6 @@
       setTimeout(() => {
         output.textContent = 'Download complete. File saved to ~/Downloads/';
       }, 1500);
-    }
-    
-    function handleFormSubmit(event) {
-      event.preventDefault();
-      
-      const form = event.target;
-      const submitBtn = form.querySelector('.form-submit');
-      const originalText = submitBtn.innerHTML;
-      
-      // Show sending animation
-      submitBtn.innerHTML = '<span class="submit-text">Encrypting...</span><span class="submit-command">$ gpg --encrypt --sign</span>';
-      submitBtn.disabled = true;
-      
-      setTimeout(() => {
-        submitBtn.innerHTML = '<span class="submit-text">Sent!</span><span class="submit-command">$ Message delivered securely</span>';
-        
-        setTimeout(() => {
-          submitBtn.innerHTML = originalText;
-          submitBtn.disabled = false;
-          form.reset();
-        }, 2000);
-      }, 2000);
     }
   </script>
 
@@ -528,15 +516,11 @@
       left: 0;
     }
     
-    .contact-form {
-      background: rgba(0, 0, 0, 0.3);
-      border: 1px solid #333;
-      border-radius: 6px;
-      padding: 1.5rem;
+    .mailto-section {
       margin: 1rem 0;
     }
     
-    .form-note {
+    .mailto-note {
       display: flex;
       align-items: center;
       gap: 0.5rem;
@@ -545,94 +529,89 @@
       font-size: 0.9rem;
     }
     
-    .terminal-form {
-      display: flex;
-      flex-direction: column;
+    .mailto-options {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1rem;
+      margin: 1.5rem 0;
     }
     
-    .form-group {
-      display: flex;
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-    
-    .form-label {
-      color: #a855f7;
-      font-weight: 500;
-      font-size: 0.9rem;
-    }
-    
-    .form-input {
-      background: rgba(0, 0, 0, 0.5);
-      border: 1px solid #333;
-      border-radius: 3px;
-      padding: 0.75rem;
-      color: #ffffff;
-      font-family: 'Fira Code', monospace;
-      font-size: 0.9rem;
-      transition: all 0.3s ease;
-    }
-    
-    .form-input:focus {
-      outline: none;
-      border-color: #8b5cf6;
-      box-shadow: 0 0 8px rgba(139, 92, 246, 0.3);
-    }
-    
-    .form-textarea {
-      resize: vertical;
-      min-height: 100px;
-    }
-    
-    .form-submit {
-      background: rgba(139, 92, 246, 0.1);
-      border: 1px solid #8b5cf6;
-      border-radius: 4px;
+    .mailto-btn {
+      background: rgba(139, 92, 246, 0.05);
+      border: 1px solid rgba(139, 92, 246, 0.2);
+      border-radius: 6px;
       padding: 1rem;
-      color: #8b5cf6;
-      font-family: 'Fira Code', monospace;
-      font-weight: 500;
-      cursor: pointer;
-      transition: all 0.3s ease;
       display: flex;
-      flex-direction: column;
       align-items: center;
-      gap: 0.3rem;
+      gap: 1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      color: inherit;
     }
     
-    .form-submit:hover:not(:disabled) {
-      background: rgba(139, 92, 246, 0.2);
-      box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+    .mailto-btn:hover {
+      background: rgba(139, 92, 246, 0.1);
       transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(139, 92, 246, 0.2);
     }
     
-    .form-submit:disabled {
-      opacity: 0.6;
-      cursor: not-allowed;
+    .btn-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
     }
     
-    .submit-text {
+    .btn-content {
+      flex: 1;
+    }
+    
+    .btn-title {
+      color: #8b5cf6;
+      font-weight: 600;
+      margin-bottom: 0.3rem;
       font-size: 0.95rem;
     }
     
-    .submit-command {
-      font-size: 0.8rem;
-      color: #888;
+    .btn-desc {
+      color: #ccc;
+      font-size: 0.85rem;
+      line-height: 1.4;
+    }
+    
+    .direct-email {
+      margin: 2rem 0 1rem 0;
+      background: rgba(0, 0, 0, 0.3);
+      border: 1px solid #333;
+      border-radius: 4px;
+      padding: 1rem;
+    }
+    
+    .email-direct {
+      margin-top: 0.5rem;
+      padding-left: 1rem;
+    }
+    
+    .email-link {
+      color: #8b5cf6;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s ease;
+    }
+    
+    .email-link:hover {
+      color: #ffffff;
     }
     
     @media (max-width: 768px) {
+      .mailto-options {
+        grid-template-columns: 1fr;
+      }
+      
       .contact-grid {
         grid-template-columns: 1fr;
       }
       
       .platform-grid {
         grid-template-columns: 1fr;
-      }
-      
-      .availability-status {
-        flex-direction: column;
-        gap: 0.5rem;
       }
     }
   </style>
