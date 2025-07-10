@@ -51,118 +51,98 @@
         <div class="blog-posts">
           <article class="blog-post featured">
             <div class="post-header">
-              <h3>Understanding Buffer Overflows: From Theory to Exploitation</h3>
+              <h3>Getting Started in Ethical Hacking - Part 1</h3>
               <div class="post-meta">
-                <span class="date">2024-12-15</span>
-                <span class="category">Tutorial</span>
-                <span class="read-time">12 min read</span>
-              </div>
-            </div>
-            <div class="post-excerpt">
-              Deep dive into buffer overflow vulnerabilities, covering stack-based overflows, shellcode development, and modern exploitation techniques. Includes practical examples and mitigation strategies.
-            </div>
-            <div class="post-commands">
-              <div class="cmd-line">$ gdb -q ./vulnerable_program</div>
-              <div class="cmd-line">(gdb) run $(python -c "print 'A'*140 + '\x8f\x35\x4a\x5f'")</div>
-            </div>
-            <div class="post-tags">
-              <span class="tag">Binary Exploitation</span>
-              <span class="tag">Assembly</span>
-              <span class="tag">GDB</span>
-            </div>
-            <a href="#" class="read-more">Read Full Article →</a>
-          </article>
-          
-          <article class="blog-post">
-            <div class="post-header">
-              <h3>Active Directory Enumeration with BloodHound</h3>
-              <div class="post-meta">
-                <span class="date">2024-12-08</span>
-                <span class="category">Red Team</span>
+                <span class="date">2024-12-20</span>
+                <span class="category">Pentesting 101</span>
                 <span class="read-time">8 min read</span>
               </div>
             </div>
             <div class="post-excerpt">
-              Complete guide to using BloodHound for Active Directory enumeration and attack path discovery. Learn to identify privilege escalation opportunities and lateral movement paths.
+              Introduction to ethical hacking fundamentals, setting up your first lab environment, and understanding the mindset of a penetration tester.
             </div>
             <div class="post-commands">
-              <div class="cmd-line">$ bloodhound-python -u user -p pass -d corp.local -c all</div>
+              <div class="cmd-line">$ sudo apt update && sudo apt install kali-linux-default</div>
+              <div class="cmd-line">$ virtualbox --startvm "Metasploitable2"</div>
             </div>
             <div class="post-tags">
-              <span class="tag">Active Directory</span>
-              <span class="tag">BloodHound</span>
-              <span class="tag">Enumeration</span>
+              <span class="tag">Beginner</span>
+              <span class="tag">Lab Setup</span>
+              <span class="tag">Fundamentals</span>
             </div>
-            <a href="#" class="read-more">Read Full Article →</a>
+            <a href="blog-post-1.html" class="read-more">Read Full Article →</a>
           </article>
           
           <article class="blog-post">
             <div class="post-header">
-              <h3>Building a Home Cybersecurity Lab on a Budget</h3>
+              <h3>Network Reconnaissance Techniques</h3>
               <div class="post-meta">
-                <span class="date">2024-11-28</span>
+                <span class="date">2024-12-18</span>
+                <span class="category">Pentesting 101</span>
+                <span class="read-time">12 min read</span>
+              </div>
+            </div>
+            <div class="post-excerpt">
+              Learn essential network reconnaissance techniques using Nmap, Masscan, and other tools to gather information about target systems.
+            </div>
+            <div class="post-commands">
+              <div class="cmd-line">$ nmap -sS -sV -O target.com</div>
+              <div class="cmd-line">$ masscan -p1-65535 192.168.1.0/24 --rate=1000</div>
+            </div>
+            <div class="post-tags">
+              <span class="tag">Reconnaissance</span>
+              <span class="tag">Nmap</span>
+              <span class="tag">Network Scanning</span>
+            </div>
+            <a href="blog-post-2.html" class="read-more">Read Full Article →</a>
+          </article>
+          
+          <article class="blog-post">
+            <div class="post-header">
+              <h3>Web Application Testing Basics</h3>
+              <div class="post-meta">
+                <span class="date">2024-12-15</span>
+                <span class="category">Pentesting 101</span>
+                <span class="read-time">10 min read</span>
+              </div>
+            </div>
+            <div class="post-excerpt">
+              Introduction to web application security testing, covering common vulnerabilities and basic testing methodologies using Burp Suite.
+            </div>
+            <div class="post-commands">
+              <div class="cmd-line">$ burpsuite &</div>
+              <div class="cmd-line">$ gobuster dir -u http://target.com -w /usr/share/wordlists/dirb/common.txt</div>
+            </div>
+            <div class="post-tags">
+              <span class="tag">Web Security</span>
+              <span class="tag">Burp Suite</span>
+              <span class="tag">OWASP</span>
+            </div>
+            <a href="blog-post-3.html" class="read-more">Read Full Article →</a>
+          </article>
+          
+          <article class="blog-post">
+            <div class="post-header">
+              <h3>Building Your First Home Lab</h3>
+              <div class="post-meta">
+                <span class="date">2024-12-12</span>
                 <span class="category">Tutorial</span>
                 <span class="read-time">15 min read</span>
               </div>
             </div>
             <div class="post-excerpt">
-              Step-by-step guide to creating a comprehensive cybersecurity lab environment using VirtualBox, pfSense, and various vulnerable machines. Perfect for students and professionals.
+              Complete guide to setting up a cybersecurity home lab on a budget, including virtual machines, networking, and vulnerable applications.
             </div>
             <div class="post-commands">
-              <div class="cmd-line">$ vagrant up kali-linux windows-10 metasploitable</div>
+              <div class="cmd-line">$ vagrant init ubuntu/bionic64</div>
+              <div class="cmd-line">$ docker run -d -p 80:80 vulnerables/web-dvwa</div>
             </div>
             <div class="post-tags">
               <span class="tag">Home Lab</span>
               <span class="tag">Virtualization</span>
               <span class="tag">Setup Guide</span>
             </div>
-            <a href="#" class="read-more">Read Full Article →</a>
-          </article>
-          
-          <article class="blog-post">
-            <div class="post-header">
-              <h3>OSINT Techniques for Cybersecurity Professionals</h3>
-              <div class="post-meta">
-                <span class="date">2024-11-15</span>
-                <span class="category">OSINT</span>
-                <span class="read-time">10 min read</span>
-              </div>
-            </div>
-            <div class="post-excerpt">
-              Comprehensive overview of Open Source Intelligence gathering techniques, tools, and methodologies for security assessments and threat hunting operations.
-            </div>
-            <div class="post-commands">
-              <div class="cmd-line">$ theHarvester -d target.com -b google,bing,linkedin</div>
-            </div>
-            <div class="post-tags">
-              <span class="tag">OSINT</span>
-              <span class="tag">Reconnaissance</span>
-              <span class="tag">Threat Hunting</span>
-            </div>
-            <a href="#" class="read-more">Read Full Article →</a>
-          </article>
-          
-          <article class="blog-post">
-            <div class="post-header">
-              <h3>Web Application Security: Beyond OWASP Top 10</h3>
-              <div class="post-meta">
-                <span class="date">2024-10-30</span>
-                <span class="category">Web Security</span>
-                <span class="read-time">14 min read</span>
-              </div>
-            </div>
-            <div class="post-excerpt">
-              Advanced web application security testing techniques including business logic flaws, race conditions, and modern framework vulnerabilities that go beyond traditional OWASP categories.
-            </div>
-            <div class="post-commands">
-              <div class="cmd-line">$ burpsuite --config-file=custom_config.json</div>
-            </div>
-            <div class="post-tags">
-              <span class="tag">Web Security</span>
-              <span class="tag">Burp Suite</span>
-              <span class="tag">Advanced Testing</span>
-            </div>
-            <a href="#" class="read-more">Read Full Article →</a>
+            <a href="blog-post-4.html" class="read-more">Read Full Article →</a>
           </article>
         </div>
         
